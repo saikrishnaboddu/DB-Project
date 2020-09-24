@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Debug;
 
 import androidx.annotation.Nullable;
 
@@ -43,19 +44,40 @@ public class DatabaseManager extends SQLiteOpenHelper
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+table_Name);
         onCreate(sqLiteDatabase);
     }
-    public boolean insertRecord(String restName,String restLoc,int rating)
+    public boolean insertRecord(String restName,String restLoc,int rating,int restID)
     {
+        long result=0;
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put(Rest_Name,restName);
         contentValues.put(Rest_Location,restLoc);
         contentValues.put(Rest_Rating,rating);
-        long result=db.insert(table_Name,null,contentValues);
+        if(restID==0)
+        {
+             result=db.insert(table_Name,null,contentValues);
+        }
+        else if(restName.equals("")&&restLoc.equals(""))
+        {
+            contentValues.put(Rest_ID,restID);
+                db.delete(table_Name, "Rest_ID=?", new String[]{String.valueOf(restID)});
+
+        }
+        else
+        {
+            contentValues.put(Rest_ID,restID);
+
+            result=db.update(table_Name,contentValues, "Rest_ID=?",new String[] {String.valueOf(restID)});
+            System.out.println(contentValues);
+
+
+        }
         if(result==-1)
             return  false;
         else
             return  true;
     }
+
+
     public Cursor displayTable()
     {
         SQLiteDatabase db=this.getWritableDatabase();
