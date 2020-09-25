@@ -69,9 +69,9 @@ public class Update extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_update, container, false);
 
-        restID=(EditText)view.findViewById(R.id.editID);
-        restName=(EditText)view.findViewById(R.id.editName);
-        restLocation=(EditText)view.findViewById(R.id.editLocation);
+        restID= view.findViewById(R.id.editID);
+        restName= view.findViewById(R.id.editName);
+        restLocation= view.findViewById(R.id.editLocation);
 
         Button udBtn=view.findViewById(R.id.updateButton);
         udBtn.setOnClickListener(new View.OnClickListener() {

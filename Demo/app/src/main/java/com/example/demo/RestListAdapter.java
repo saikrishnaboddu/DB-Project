@@ -55,9 +55,9 @@ List list=new ArrayList();
             LayoutInflater layoutInflater=(LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row=layoutInflater.inflate(R.layout.row_layout,parent,false);
             layoutHandler=new LayoutHandler();
-            layoutHandler.restName=(TextView)row.findViewById(R.id.restrauntName);
-            layoutHandler.restLocation=(TextView)row.findViewById(R.id.restaurantLocation);
-            layoutHandler.restRating=(TextView)row.findViewById(R.id.restaurantRating);
+            layoutHandler.restName= row.findViewById(R.id.restrauntName);
+            layoutHandler.restLocation= row.findViewById(R.id.restaurantLocation);
+            layoutHandler.restRating= row.findViewById(R.id.restaurantRating);
             row.setTag(layoutHandler);
         }
         else

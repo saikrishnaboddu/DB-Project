@@ -33,8 +33,6 @@ public class RestaurantActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new Insert()).commit();
     }
 
-    ;
-
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavBarImpl =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
 

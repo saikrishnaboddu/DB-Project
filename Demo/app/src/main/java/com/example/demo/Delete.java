@@ -64,7 +64,7 @@ DatabaseManager dbm;
         dbm=new DatabaseManager(getActivity());
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_delete, container, false);
-        final EditText restId=(EditText)view.findViewById(R.id.delEdtID);
+        final EditText restId= view.findViewById(R.id.delEdtID);
         Button del=view.findViewById(R.id.delBtn);
         del.setOnClickListener(new View.OnClickListener() {
             @Override

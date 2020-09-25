@@ -17,7 +17,7 @@ public class ShowRestaurant extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_restaurant);
-        listView=(ListView) findViewById(R.id.list_view);
+        listView= findViewById(R.id.list_view);
         dbm=new DatabaseManager(this);
         sqLiteDatabase=dbm.getReadableDatabase();
         cursor=dbm.displayTable();

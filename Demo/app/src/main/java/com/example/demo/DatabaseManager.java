@@ -71,10 +71,7 @@ public class DatabaseManager extends SQLiteOpenHelper
 
 
         }
-        if(result==-1)
-            return  false;
-        else
-            return  true;
+        return result != -1;
     }
 
 

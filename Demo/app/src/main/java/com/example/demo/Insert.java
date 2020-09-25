@@ -72,8 +72,8 @@ DatabaseManager dbm;
 
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_insert, container, false);
-        restName=(EditText)view.findViewById(R.id.editRestName);
-        restLoc=(EditText)view.findViewById(R.id.editRestLocation);
+        restName= view.findViewById(R.id.editRestName);
+        restLoc= view.findViewById(R.id.editRestLocation);
         dbm=new DatabaseManager(getActivity());
         add=view.findViewById(R.id.insertBtn);
         add.setOnClickListener(new View.OnClickListener() {
