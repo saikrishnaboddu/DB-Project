@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#98DFA0"
-    android:backgroundTint="#A6D694"
+    android:background="@drawable/bg"
+
     tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/restButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="113dp"
         android:layout_marginTop="180dp"
+        android:background="@drawable/ic_restbtn"
         android:onClick="onRestrauntClicked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/custButton"
-        android:layout_width="126dp"
-        android:layout_height="105dp"
+        android:layout_width="231dp"
+        android:layout_height="110dp"
+        android:background="@drawable/ic_cust"
         android:onClick="onCustomerClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restButton"
-        app:layout_constraintVertical_bias="0.37"
-        app:srcCompat="@android:drawable/star_big_on" />
+        app:layout_constraintVertical_bias="0.37" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
