@@ -24,4 +24,10 @@ public static String displayName;
            Intent intent = new Intent(this, RestaurantActivity.class);
             startActivity(intent);
     }
+    public void onCustomerClicked(View view)
+    {
+        Intent intent=new Intent(this,ShowRestaurant.class);
+        startActivity(intent);
+
+    }
 }

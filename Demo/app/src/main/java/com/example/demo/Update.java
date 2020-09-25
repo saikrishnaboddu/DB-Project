@@ -90,6 +90,7 @@ public class Update extends Fragment {
                         Toast.makeText(getActivity(), "Record Updated", Toast.LENGTH_LONG).show();
                         restName.setText("");
                         restLocation.setText("");
+                        restID.setText("");
                     }
                     else
                         Toast.makeText(getActivity(), "Fail", Toast.LENGTH_LONG).show();
