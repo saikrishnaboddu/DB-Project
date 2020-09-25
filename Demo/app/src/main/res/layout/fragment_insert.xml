@@ -11,11 +11,11 @@
         android:id="@+id/restName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="144dp"
         android:text="Restaurant Name :"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,20 +26,22 @@
         android:ems="10"
         android:hint="Enter Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/restName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/restName"
-        app:layout_constraintTop_toTopOf="@+id/restName" />
+        app:layout_constraintBottom_toTopOf="@+id/restLocation"
+        app:layout_constraintEnd_toEndOf="@+id/restName"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/restName"
+        app:layout_constraintTop_toBottomOf="@+id/restName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/restLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="84dp"
         android:text="Restaurant Location :"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restName" />
 
@@ -50,12 +52,12 @@
         android:ems="10"
         android:hint="Enter Location"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/restLocation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/restLocation"
-        app:layout_constraintTop_toTopOf="@+id/restLocation"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/restLocation"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/restLocation"
+        app:layout_constraintTop_toBottomOf="@+id/restLocation"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/insertBtn"
